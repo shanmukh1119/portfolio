@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shanmukh Rao | Fullstack Engineer</title>
+    <meta name="description" content="Portfolio of Shanmukh Rao Vambaravilli, a Fullstack Engineer & Problem Solver.">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">
+                <span class="logo__highlight">&lt;</span>Shanmukh<span class="logo__highlight">/&gt;</span>
+            </a>
+            
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                    <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+                    <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
+                    <li class="nav__item"><a href="#certifications" class="nav__link">Certifications</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="nav__actions">
+                <a href="resume.html" target="_blank" rel="noopener noreferrer" class="btn btn--outline">resume</a>
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <!-- Hero Section -->
+        <section class="hero container section" id="home">
+            <div class="hero__content">
+                <span class="hero__subtitle">Hi, my name is</span>
+                <h1 class="hero__title">Shanmukh Rao<span class="dot">.</span></h1>
+                <h2 class="hero__subtitle-main">Web Developer & Problem Solver.</h2>
+                <p class="hero__description">
+                    <strong>What does that mean?</strong> I build websites—both the visual parts you interact with and the behind-the-scenes logic that makes them work.<br><br>
+                    Driven by curiosity, I firmly believe that consistency beats talent when talent doesn’t work hard.
+                </p>
+                <div class="hero__buttons">
+                    <a href="#projects" class="btn btn--primary">View My Work</a>
+                    <a href="#contact" class="btn btn--secondary">Get In Touch</a>
+                </div>
+            </div>
+            <div class="hero__image-container">
+                <div class="hero__shape">
+                    <div class="circle circle--1"></div>
+                    <div class="circle circle--2"></div>
+                </div>
+                <img src="pictures/WhatsApp Image 2026-01-27 at 7.42.08 PM.jpeg" alt="Shanmukh Rao" class="hero__profile-img">
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about section container" id="about">
+            <h2 class="section__title">My Story</h2>
+            <div class="about__container">
+                <div class="about__data">
+                    <p class="about__description">
+                        My background isn't simply sitting behind a screen. I've worked in a media agency, taught home tuitions, and even distributed milk. These hands-on experiences taught me resilience and the true value of hard work.<br><br>
+                        Today, I channel that same discipline into learning software engineering. I write code not just to make computer programs run, but to build reliable, meaningful things that solve real-world problems.
+                    </p>
+                    <div class="about__strengths">
+                        <h3 class="subsection__title">Core Strengths</h3>
+                        <ul class="strengths__list">
+                            <li><i class="fa-solid fa-check-circle"></i> Consistent Problem-Solver</li>
+                            <li><i class="fa-solid fa-check-circle"></i> Highly Disciplined & Curious Learner</li>
+                            <li><i class="fa-solid fa-check-circle"></i> Exploring AI Technologies</li>
+                            <li><i class="fa-solid fa-check-circle"></i> Team Management</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="about__hobbies" style="margin-top: 2rem;">
+                        <h3 class="subsection__title">Hobbies & Interests</h3>
+                        <div class="hobbies__grid" style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                            <span class="hobby__tag" style="background: rgba(56, 189, 248, 0.1); padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem; border: 1px solid var(--primary);"> Yoga & Meditation</span>
+                            <span class="hobby__tag" style="background: rgba(16, 185, 129, 0.1); padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem; border: 1px solid var(--secondary);"><i class="fa-solid fa-video"></i> Vlogging</span>
+                            <span class="hobby__tag" style="background: rgba(255, 255, 255, 0.05); padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem; border: 1px solid var(--border-color);"><i class="fa-solid fa-microchip"></i> Exploring AI</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about__timeline">
+                    <h3 class="subsection__title"><i class="fa-solid fa-route"></i> My Journey So Far</h3>
+                    <div class="timeline">
+                        <div class="timeline__item">
+                            <span class="timeline__date">Current</span>
+                            <h4 class="timeline__title">Act Academy</h4>
+                            <p class="timeline__text">Learning how to build complete websites from scratch.</p>
+                        </div>
+                        <div class="timeline__item">
+                            <h4 class="timeline__title">Exploring Tech & AI</h4>
+                            <p class="timeline__text">Exploring the basics of Artificial Intelligence to see how it can help us build smarter tools for the future.</p>
+                        </div>
+                        <div class="timeline__item">
+                            <h4 class="timeline__title">Real-world Hustle</h4>
+                            <p class="timeline__text">Worked in a media agency, gave home tuitions, distributed milk, and more. Taught me grit.</p>
+                        </div>
+                        <div class="timeline__item">
+                            <h4 class="timeline__title">12th Grade</h4>
+                            <p class="timeline__text">Graduated with an outstanding <strong>97.8%</strong>.</p>
+                        </div>
+                        <div class="timeline__item">
+                            <h4 class="timeline__title">10th Grade</h4>
+                            <p class="timeline__text">Achieved a perfect <strong>10 GPA</strong>.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="skills section container" id="skills">
+            <h2 class="section__title">Tools I Use to Build</h2>
+            <p style="color: var(--text-muted); margin-bottom: 2rem; max-width: 600px;">Think of these as my digital toolbox. I use different languages and tools depending on what needs to be built—whether it's designing a beautiful page or structuring a database.</p>
+            <div class="skills__grid">
+                <!-- Skill items -->
+                <div class="skill__card"><i class="fa-brands fa-html5 skill__icon" style="color:#E34F26"></i><span>HTML</span></div>
+                <div class="skill__card"><i class="fa-brands fa-css3-alt skill__icon" style="color:#1572B6"></i><span>CSS</span></div>
+                <div class="skill__card"><i class="fa-brands fa-js skill__icon" style="color:#F7DF1E"></i><span>JavaScript</span></div>
+                <div class="skill__card"><i class="fa-brands fa-node-js skill__icon" style="color:#339933"></i><span>Node.js</span></div>
+                <div class="skill__card"><i class="fa-brands fa-python skill__icon" style="color:#3776AB"></i><span>Python</span></div>
+                <div class="skill__card"><i class="fa-solid fa-database skill__icon" style="color:#003B57"></i><span>SQL</span></div>
+                <div class="skill__card"><i class="fa-brands fa-bootstrap skill__icon" style="color:#7952B3"></i><span>Bootstrap</span></div>
+                <div class="skill__card"><i class="fa-solid fa-wind skill__icon" style="color:#38B2AC"></i><span>Tailwind CSS</span></div>
+                <div class="skill__card"><i class="fa-solid fa-server skill__icon" style="color:#000000"></i><span>Express.js</span></div>
+                <div class="skill__card"><i class="fa-solid fa-file-code skill__icon" style="color:#B4CA65"></i><span>EJS</span></div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="projects section container" id="projects">
+            <h2 class="section__title">Things I've Built</h2>
+            <p style="color: var(--text-muted); margin-bottom: 2rem; max-width: 600px;">A look at some of the practical solutions I've created to solve everyday problems.</p>
+            <div class="projects__grid">
+                
+                <!-- Project 1: Khana Khazana -->
+                <div class="project__card">
+                    <div class="project__preview" style="background: linear-gradient(135deg, #ff6b35, #f7c59f); display:flex; align-items:center; justify-content:center;">
+                        <span class="project__preview-logo" style="color:#fff; font-size:1.6rem; font-weight:800; letter-spacing:1px;">Khana<span class="preview-dot" style="color:#fff200;">.</span>Khazana</span>
+                    </div>
+                    <div class="project__content">
+                        <p class="project__overline">Personal Project</p>
+                        <h3 class="project__title">Khana Khazana</h3>
+                        <p class="project__description">
+                            A food recipe web app where you can discover and explore a variety of delicious recipes. Browse by category, search for your favourites, and get inspired to cook something new.
+                        </p>
+                        <ul class="project__tech">
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                        </ul>
+                        <div class="project__links">
+                            <a href="https://shanmukh1207.github.io/Khana-Khazana/" target="_blank" rel="noopener noreferrer" class="project__link" aria-label="Live Demo">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Luminary Landing (AI-Assisted) -->
+                <div class="project__card">
+                    <div class="project__preview project__preview--luminary">
+                        <span class="project__preview-logo">luminary<span class="preview-dot">.</span></span>
+                    </div>
+                    <div class="project__content">
+                        <p class="project__overline project__overline--ai">AI-Assisted Build</p>
+                        <h3 class="project__title">Luminary Landing</h3>
+                        <p class="project__description">
+                            A sleek, modern landing page designed and built with the help of AI. Features polished aesthetics, smooth interactions, and a fully responsive layout.
+                        </p>
+                        <ul class="project__tech">
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                            <li>AI-Assisted</li>
+                        </ul>
+                        <div class="project__links">
+                            <a href="https://shanmukh1207.github.io/luminary-landing/" target="_blank" rel="noopener noreferrer" class="project__link" aria-label="Live Demo">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section class="certifications section container" id="certifications">
+            <h2 class="section__title">Certifications & Achievements</h2>
+            <div class="certifications__grid">
+
+                <!-- Fullstack Web Development -->
+                <div class="cert__card">
+                    <div class="cert__header cert__header--fullstack">
+                        <i class="fa-brands fa-html5" style="color:#E34F26"></i>
+                        <i class="fa-brands fa-css3-alt" style="color:#1572B6"></i>
+                        <i class="fa-brands fa-js" style="color:#F7DF1E"></i>
+                        <i class="fa-brands fa-node-js" style="color:#339933"></i>
+                    </div>
+                    <div class="cert__info">
+                        <h3 class="cert__title">Fullstack Web Development</h3>
+                        <p class="cert__issuer">Online Platforms</p>
+                        <span class="cert__date">Ongoing</span>
+                    </div>
+                </div>
+
+                <!-- AI Fundamentals -->
+                <div class="cert__card">
+                    <div class="cert__header cert__header--ai">
+                        <i class="fa-solid fa-brain" style="color:#a855f7"></i>
+                        <i class="fa-solid fa-robot" style="color:#38bdf8"></i>
+                    </div>
+                    <div class="cert__info">
+                        <h3 class="cert__title">AI Fundamentals</h3>
+                        <p class="cert__issuer">Act Academy</p>
+                        <span class="cert__date">Ongoing</span>
+                    </div>
+                </div>
+
+                <!-- DSA -->
+                <div class="cert__card">
+                    <div class="cert__header cert__header--dsa">
+                        <i class="fa-solid fa-sitemap" style="color:#10b981"></i>
+                        <i class="fa-solid fa-code" style="color:#38bdf8"></i>
+                    </div>
+                    <div class="cert__info">
+                        <h3 class="cert__title">Data Structures & Algorithms</h3>
+                        <p class="cert__issuer">Self-taught / Online Platform</p>
+                        <span class="cert__date">Ongoing</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact section container" id="contact">
+            <h2 class="section__title" style="margin-left:auto; margin-right:auto; justify-content:center;">Get In Touch</h2>
+            <p class="contact__subtitle">Whether you have a question or just want to say hi, my inbox is always open.</p>
+            
+            <div class="contact__container">
+                <div class="contact__info">
+                    <a href="mailto:shanmukh1207@gmail.com" class="contact__card">
+                        <i class="fa-regular fa-envelope contact__icon"></i>
+                        <h3 class="contact__title">Email</h3>
+                        <span class="contact__data">shanmukh1207@gmail.com</span>
+                    </a>
+                    
+                    <a href="https://linkedin.com/in/shanmukh-rao-vambaravilli" target="_blank" rel="noopener noreferrer" class="contact__card">
+                        <i class="fa-brands fa-linkedin-in contact__icon"></i>
+                        <h3 class="contact__title">LinkedIn</h3>
+                        <span class="contact__data">Shanmukh Rao Vambaravilli</span>
+                    </a>
+
+                    <a href="https://github.com/shanmukh1207" target="_blank" rel="noopener noreferrer" class="contact__card">
+                        <i class="fa-brands fa-github contact__icon"></i>
+                        <h3 class="contact__title">GitHub</h3>
+                        <span class="contact__data">shanmukh1207</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__container container">
+            <p class="footer__copy">
+                &copy; 2026 Shanmukh Rao Vambaravilli. Built with discipline & clarity.
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

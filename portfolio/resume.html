@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shanmukh Rao — Resume</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+      background: #eef2f7;
+      color: #1e293b;
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    /* ── Top bar (screen only) ── */
+    .top-bar {
+      background: #0f172a;
+      color: #94a3b8;
+      padding: 0.65rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.82rem;
+      gap: 1rem;
+    }
+    .top-bar span { opacity: 0.8; }
+    .btn-pdf {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      background: #38bdf8;
+      color: #000;
+      border: none;
+      padding: 0.45rem 1.1rem;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 0.875rem;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: background 0.2s;
+    }
+    .btn-pdf:hover { background: #7dd3fc; }
+
+    /* ── Page (A4-ish) ── */
+    .page {
+      max-width: 820px;
+      margin: 2rem auto 3rem;
+      background: #fff;
+      padding: 2.75rem 3rem;
+      border-radius: 4px;
+      box-shadow: 0 6px 40px rgba(0,0,0,0.12);
+    }
+
+    /* ── Header ── */
+    .r-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 1.5rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 2px solid #1e293b;
+      margin-bottom: 1.5rem;
+    }
+    .r-name {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #1e293b;
+      letter-spacing: -0.5px;
+    }
+    .r-title {
+      font-size: 0.95rem;
+      color: #3b82f6;
+      font-weight: 500;
+      margin-top: 0.2rem;
+    }
+    .r-contacts {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 0.3rem;
+      font-size: 0.82rem;
+      color: #475569;
+    }
+    .r-contacts a {
+      color: #3b82f6;
+      text-decoration: none;
+    }
+    .r-contacts a:hover { text-decoration: underline; }
+
+    /* ── Section ── */
+    .section { margin-bottom: 1.4rem; }
+    .section-title {
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.8px;
+      color: #1e293b;
+      margin-bottom: 0.7rem;
+      padding-bottom: 0.3rem;
+      border-bottom: 1.5px solid #e2e8f0;
+    }
+
+    /* ── Entry (edu / experience) ── */
+    .entry {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 0.85rem;
+    }
+    .entry:last-child { margin-bottom: 0; }
+    .entry-body { flex: 1; }
+    .entry-title {
+      font-weight: 600;
+      font-size: 0.92rem;
+      color: #1e293b;
+    }
+    .entry-sub {
+      font-size: 0.83rem;
+      color: #64748b;
+      margin-top: 0.1rem;
+    }
+    .entry-meta {
+      text-align: right;
+      white-space: nowrap;
+      font-size: 0.82rem;
+      color: #64748b;
+      flex-shrink: 0;
+    }
+    .entry-bullets {
+      margin-top: 0.45rem;
+      padding-left: 1.1rem;
+      color: #475569;
+      font-size: 0.855rem;
+    }
+    .entry-bullets li { margin-bottom: 0.2rem; }
+
+    /* ── Skills ── */
+    .skills-table {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.4rem 2rem;
+    }
+    .skill-row { font-size: 0.875rem; color: #475569; }
+    .skill-row strong { color: #1e293b; }
+
+    /* ── Projects ── */
+    .project-link {
+      font-size: 0.78rem;
+      color: #3b82f6;
+      font-weight: 400;
+      margin-left: 0.5rem;
+      text-decoration: none;
+    }
+    .project-link:hover { text-decoration: underline; }
+
+    /* ── Certifications ── */
+    .cert-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.5rem 2rem;
+    }
+    .cert-name { font-weight: 600; font-size: 0.875rem; color: #1e293b; }
+    .cert-issuer { font-size: 0.8rem; color: #64748b; }
+
+    /* ── Achievements ── */
+    .ach-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 1rem;
+      margin-bottom: 0.35rem;
+      font-size: 0.875rem;
+    }
+    .ach-row:last-child { margin-bottom: 0; }
+    .ach-text { color: #475569; flex: 1; }
+    .ach-text strong { color: #1e293b; }
+    .ach-year { color: #64748b; white-space: nowrap; }
+
+    /* ── Tags (languages, hobbies) ── */
+    .tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+    .tag {
+      background: #f1f5f9;
+      color: #475569;
+      padding: 0.2rem 0.7rem;
+      border-radius: 20px;
+      font-size: 0.82rem;
+      border: 1px solid #e2e8f0;
+    }
+
+    /* ── Two-column bottom row ── */
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0 2.5rem;
+    }
+
+    /* ── Print styles ── */
+    @media print {
+      @page { margin: 1.4cm; size: A4; }
+      body { background: #fff; font-size: 12px; }
+      .top-bar { display: none; }
+      .page {
+        margin: 0;
+        padding: 0;
+        box-shadow: none;
+        max-width: 100%;
+      }
+      .project-link, .r-contacts a { color: #1d4ed8; }
+      a { text-decoration: none; }
+    }
+
+    @media screen and (max-width: 600px) {
+      .page { padding: 1.5rem; }
+      .r-header { flex-direction: column; }
+      .r-contacts { align-items: flex-start; }
+      .skills-table, .cert-grid, .two-col { grid-template-columns: 1fr; }
+      .entry { flex-direction: column; }
+      .entry-meta { text-align: left; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top action bar (hidden when printing) -->
+  <div class="top-bar">
+    <span>Tip: In the print dialog, set <strong>Destination → Save as PDF</strong> for a clean download.</span>
+    <button class="btn-pdf" onclick="window.print()">
+      ⬇&nbsp; Download PDF
+    </button>
+  </div>
+
+  <div class="page">
+
+    <!-- Header -->
+    <header class="r-header">
+      <div>
+        <div class="r-name">Shanmukh Rao Vambaravilli</div>
+        <div class="r-title">Full Stack Web Developer</div>
+      </div>
+      <div class="r-contacts">
+        <span>shanmukhm.learning@gmail.com</span>
+        <span>+91 6305490418 &nbsp;|&nbsp; Hyderabad</span>
+        <a href="https://www.linkedin.com/in/shanmukh-rao-vambaravilli/" target="_blank">linkedin.com/in/shanmukh-rao-vambaravilli</a>
+        <a href="https://github.com/shanmukh1207" target="_blank">github.com/shanmukh1207</a>
+      </div>
+    </header>
+
+    <!-- Career Objective -->
+    <section class="section">
+      <h2 class="section-title">Career Objective</h2>
+      <p style="color:#475569; font-size:0.875rem;">
+        I want to grow as a software engineer by solving meaningful problems using technology. I am actively learning web development and strengthening my problem-solving skills, with a focus on building real-world projects and continuously improving myself.
+      </p>
+    </section>
+
+    <!-- Education -->
+    <section class="section">
+      <h2 class="section-title">Education</h2>
+      <div class="entry">
+        <div class="entry-body">
+          <div class="entry-title">Class 12 (Science) — TSMS Bollaram</div>
+          <div class="entry-sub">97.8%</div>
+        </div>
+        <div class="entry-meta">2021 – 2023<br>Hyderabad</div>
+      </div>
+      <div class="entry">
+        <div class="entry-body">
+          <div class="entry-title">Class 10 — TSMS Bollaram</div>
+          <div class="entry-sub">10 GPA</div>
+        </div>
+        <div class="entry-meta">2020 – 2021<br>Hyderabad</div>
+      </div>
+    </section>
+
+    <!-- Training -->
+    <section class="section">
+      <h2 class="section-title">Internship / Training</h2>
+      <div class="entry">
+        <div class="entry-body">
+          <div class="entry-title">Academy for Careers in Technology (ACT) — By Freshworks</div>
+          <ul class="entry-bullets">
+            <li>Learning and applying Full Stack Web Development concepts</li>
+            <li>Building frontend and backend components for web applications</li>
+            <li>Strengthening problem-solving and coding skills through practical tasks</li>
+          </ul>
+        </div>
+        <div class="entry-meta">Aug 2025 – Present<br>Hyderabad</div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="section">
+      <h2 class="section-title">Skills</h2>
+      <div class="skills-table">
+        <div class="skill-row"><strong>Front-End:</strong> HTML, CSS, Bootstrap, Tailwind CSS</div>
+        <div class="skill-row"><strong>Tools:</strong> Git, GitHub</div>
+        <div class="skill-row"><strong>Languages:</strong> JavaScript, Python</div>
+        <div class="skill-row"><strong>Core:</strong> Problem Solving, Responsive Web Design</div>
+        <div class="skill-row"><strong>Back-End:</strong> Node.js, Express.js</div>
+        <div class="skill-row"><strong>Database:</strong> SQL</div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="section">
+      <h2 class="section-title">Projects</h2>
+      <div class="entry">
+        <div class="entry-body">
+          <div class="entry-title">
+            Event Management — Event Nest
+            <a class="project-link" href="https://github.com/meenamurali1217-dot/Event_Nest_Celebrate" target="_blank">github.com/…/Event_Nest_Celebrate</a>
+          </div>
+          <ul class="entry-bullets">
+            <li>Developed a web-based platform connecting customers with local event vendors</li>
+            <li>Designed and implemented responsive user interfaces using HTML, CSS, and JavaScript</li>
+            <li>Built backend functionality using Python to handle core business logic</li>
+            <li>Enabled users to explore and interact with event service providers</li>
+          </ul>
+        </div>
+      </div>
+      <div class="entry" style="margin-top:0.75rem;">
+        <div class="entry-body">
+          <div class="entry-title">
+            Luminary Landing
+            <a class="project-link" href="https://shanmukh1207.github.io/luminary-landing/" target="_blank">shanmukh1207.github.io/luminary-landing</a>
+          </div>
+          <ul class="entry-bullets">
+            <li>Sleek, modern landing page built with polished aesthetics and smooth interactions</li>
+            <li>Fully responsive layout designed using HTML, CSS, and JavaScript</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications -->
+    <section class="section">
+      <h2 class="section-title">Certifications</h2>
+      <div class="cert-grid">
+        <div>
+          <div class="cert-name">Introduction to HTML</div>
+          <div class="cert-issuer">Simplilearn · 2025</div>
+        </div>
+        <div>
+          <div class="cert-name">Introduction to CSS</div>
+          <div class="cert-issuer">Nexademy · 2025</div>
+        </div>
+        <div>
+          <div class="cert-name">Introduction to JavaScript</div>
+          <div class="cert-issuer">Simplilearn · 2025</div>
+        </div>
+        <div>
+          <div class="cert-name">Web Development for Beginners</div>
+          <div class="cert-issuer">Simplilearn · 2026</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Achievements -->
+    <section class="section">
+      <h2 class="section-title">Achievements</h2>
+      <div class="ach-row">
+        <div class="ach-text"><strong>District Rank 3</strong> — NMMS Model School</div>
+        <div class="ach-year">2018</div>
+      </div>
+      <div class="ach-row">
+        <div class="ach-text"><strong>ACT Top Scorer</strong> in Module 1, 2 &amp; 3 — Academy for Career in Technology</div>
+        <div class="ach-year">2025, 2026</div>
+      </div>
+      <div class="ach-row">
+        <div class="ach-text"><strong>1st Place — Best Moderator</strong> in Showcase Event, ACT Academy for Career in Technology</div>
+        <div class="ach-year">2025</div>
+      </div>
+    </section>
+
+    <!-- Languages + Hobbies side by side -->
+    <div class="two-col">
+      <section class="section">
+        <h2 class="section-title">Languages</h2>
+        <div class="tags">
+          <span class="tag">English</span>
+          <span class="tag">Hindi</span>
+          <span class="tag">Telugu</span>
+        </div>
+      </section>
+      <section class="section">
+        <h2 class="section-title">Hobbies &amp; Interests</h2>
+        <div class="tags">
+          <span class="tag">Listening to Audiobooks</span>
+          <span class="tag">Vlogging &amp; Content Creation</span>
+          <span class="tag">Yoga &amp; Meditation</span>
+          <span class="tag">Exploring AI</span>
+        </div>
+      </section>
+    </div>
+
+  </div>
+</body>
+</html>
